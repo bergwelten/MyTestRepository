@@ -1,0 +1,19 @@
+
+name: Environment variables
+
+on:
+  workflow_dispatch:
+
+env:
+  GLOBAL_VAR: 'My global GitHub variable'
+
+jobs:
+  showGlobalVar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show my global variable 
+        run: |
+          echo $GLOBAL_VAR 
+          echo ${{ env.GLOBAL_VAR }}
+
