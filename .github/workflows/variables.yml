@@ -17,3 +17,24 @@ jobs:
           echo $GLOBAL_VAR 
           echo ${{ env.GLOBAL_VAR }}
 
+  showJobVar:
+    runs-on: ubuntu-latest
+
+    env:
+      JOB_VAR: 'My Job variable'
+
+    steps:
+      - name: Show my Job variable
+        run: echo $JOB_VAR
+
+  showStepVar:
+    runs-on: ubuntu-latest 
+
+    steps:
+
+      env:
+        STEP_VAR: 'My Step variable'
+
+      - name: Show my Step variable
+        run: echo $STEP_VAR 
+
