@@ -32,9 +32,9 @@ jobs:
 
     steps:
 
-      env:
-        STEP_VAR: 'My Step variable'
-
       - name: Show my Step variable
         run: echo $STEP_VAR 
+
+        env:
+          STEP_VAR: 'My Step variable'
 
