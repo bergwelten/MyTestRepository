@@ -1,0 +1,35 @@
+
+name: GitHub environment variables
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  addVarGitHubEnv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add a variable to GitHub environment
+        run: echo "pimpi=hausen" >> $GITHUB_ENV 
+
+      - name: Show my new GitHub environment variable
+        run: echo ${{ env.pimpi }}
+
+  showAllGitHubEnvVars:
+    needs: addVarGitHubEnv
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show all my GitHub environment variables
+        run: env | sort
+
+  showSpecificGitHubEnvVars:
+    needs: showAllGitHubEnvVars
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show a specific GitHub environment variable
+        run: |
+          echo $GITHUB_ACTION
+          echo $GITHUB_ENV
