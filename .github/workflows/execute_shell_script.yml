@@ -9,5 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: GIT checkout 
+        uses: actions/checkout@v4
+
       - name: Execute shell script
         run: ./myScript.sh
