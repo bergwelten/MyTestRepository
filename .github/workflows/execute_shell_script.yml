@@ -13,4 +13,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Execute shell script
-        run: ./myScript.sh
+        run: |
+          chmod 700 ./myScript.sh
+          ./myScript.sh
