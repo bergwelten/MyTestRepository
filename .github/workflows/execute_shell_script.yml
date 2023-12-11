@@ -1,0 +1,13 @@
+
+name: Execute a shell script in Repo on GitHub Runner
+
+on:
+  workflow_dispatch
+
+jobs:
+  executeShellScript:
+    runs-on: 
+
+    steps:
+      - name: Execute shell script
+        run: ./myScript.sh
