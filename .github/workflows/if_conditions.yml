@@ -19,4 +19,12 @@ jobs:
 
     steps:
       - name: Step if Job 2
-        run: echo "I am executed because job if cindition is true."
+        run: echo "I am executed because job if condition is true."
+
+  jobWithStepIfCondition:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step with if condition
+        if: endsWith(github.repository, 'MyTestRepository')
+        run: echo "I am executed because step if condition is true." 
