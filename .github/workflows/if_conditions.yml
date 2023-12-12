@@ -28,3 +28,7 @@ jobs:
       - name: Step with if condition
         if: endsWith(github.repository, 'MyTestRepository')
         run: echo "I am executed because step if condition is true." 
+
+      - name: Step with wrong if condition
+        if: endsWith(github.repository, 'Pimpi')
+        run: echo "You will not see me because if condition is false."
