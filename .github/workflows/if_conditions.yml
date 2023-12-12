@@ -1,0 +1,15 @@
+
+name: if syntax
+
+on:
+  workflow_dispatch
+
+jobs:
+  jobWithIfCondition:
+    if: github.repository == 'bergwelten/MyTestRepository' 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step if Job 
+        run: echo "Im executed because job if condition is true."
+
