@@ -1,0 +1,30 @@
+
+name: Error in Steps
+
+on:
+  # push:
+  #   branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Job1 Step 1
+        run: /bin/false 
+
+      - name: Job1 Step 2
+        run: echo "Job1 after error in Step 1"
+
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Job2 Step 1
+        run: /bin/false 
+
+      - name: Job2 Step 2
+        run: echo "Job2 after error in Step 1"
+
