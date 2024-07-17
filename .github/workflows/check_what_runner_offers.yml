@@ -16,6 +16,7 @@ jobs:
           which wget
           which java
           which python
+          which gibtesnicht
           /bin/true
 
 
