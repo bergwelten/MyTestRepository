@@ -17,6 +17,8 @@ jobs:
           which java || /bin/true
           which python || /bin/true
           which gibtesnicht || /bin/true
+          which ls || /bin/true
+          which less || /bin/true
 
 
 
