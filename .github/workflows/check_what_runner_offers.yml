@@ -11,13 +11,12 @@ jobs:
     steps:
       - name: Check programms 
         run: |
-          which curl
-          which docker
-          which wget
-          which java
-          which python
-          which gibtesnicht
-          /bin/true
+          which curl || /bin/true
+          which docker || /bin/true
+          which wget || /bin/true
+          which java || /bin/true
+          which python || /bin/true
+          which gibtesnicht || /bin/true
 
 
 
