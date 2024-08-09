@@ -1,9 +1,6 @@
 {
   "name": "Pimpi Starter Workflow",
   "description": "Test for Pimpi starter workflow.",
-  "categories": [
-      "Text"
-  ],
   "filePatterns": [
      ".*"
    ]
