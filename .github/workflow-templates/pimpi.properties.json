@@ -2,6 +2,6 @@
   "name": "Pimpi Starter Workflow",
   "description": "Test for Pimpi starter workflow.",
   "filePatterns": [
-     ".*"
+     ".*\\.md$"
    ]
 }
