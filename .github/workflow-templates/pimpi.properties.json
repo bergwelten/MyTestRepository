@@ -4,5 +4,8 @@
   "iconName": "doesnotexist",
   "categories": [
       "Text"
-  ]
+  ],
+  "filePatterns": [
+     ".*"
+   ]
 }
