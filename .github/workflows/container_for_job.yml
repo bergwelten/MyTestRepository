@@ -1,0 +1,28 @@
+
+name: Container for Job
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+
+  container-job:
+
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/debian:12
+      env:
+        HANS: PLUSKAL
+
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: |
+          ls
+          hostname 
+          env
+
