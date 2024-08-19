@@ -1,0 +1,23 @@
+
+name: Container for Step
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+
+  container-job:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run step as container 
+        uses: docker://docker.io/debian:12 
+        with:
+          entrypoint: /usr/bin/hostname
+          args: --version
+
