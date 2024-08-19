@@ -1,0 +1,30 @@
+
+name: Container Services
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+
+  container-job:
+
+    runs-on: ubuntu-latest
+
+    services:
+
+      mysql:
+        image: docker.io/mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: pimpi
+          MYSQL_DATABASE: pimpi
+        ports:
+          - 3306:3306
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use mysql service
+        run: mysql --host 127.0.0.1 --port 3306 -u root -ppimpi -e "show databases"
+
