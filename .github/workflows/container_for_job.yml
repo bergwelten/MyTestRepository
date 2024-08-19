@@ -18,11 +18,16 @@ jobs:
 
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Run a one-line script
+      - name: Run commands in container 
         run: |
+          echo === Print working directory ===
+          pwd
+          echo === List files and directories ===
           ls
+          echo === Hostname ===
           hostname 
+          echo === Show all environment variables ===
           env
 
